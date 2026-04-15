@@ -1,5 +1,15 @@
+type Props = {
+    isim: string;
+    setIsim: (v: string) => void;
+    tur: string;
+    setTur: (v: string) => void;
+    puan: string;
+    setPuan: (v: string) => void;
+    ekleFilm: () => void;
+};
 
-const FilmForm = ({ isim , setIsim, tur, setTur, puan, setPuan, ekleFilm}) => {
+
+const FilmForm = ({ isim , setIsim, tur, setTur, puan, setPuan, ekleFilm}: Props) => {
     
     return (    
         <div className="backdrop-blur-lg bg-white/5 border border-white/10  p-5 rounded-2xl shadow-xl w-96 flex flex-col gap-4">

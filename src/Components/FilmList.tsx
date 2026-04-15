@@ -1,7 +1,19 @@
+type Film = {
+    isim: string;
+    tur: string;
+    puan: number;
+};
+
+type Props = {
+    filmler: Film[];
+    onSil: (index: number) => void;
+};
+
+
 import FilmCard from "./FilmCard";
 
 
-const FilmList = ({ filmler, onSil}) => {
+const FilmList = ({ filmler, onSil}: Props) => {
     if (filmler.length === 0) {
         return <p className="flex justify-center align-center opacity-65 font-bold">Henüz film eklenmedi. Hadi ilk filmini ekle!</p>;
     }

@@ -1,12 +1,16 @@
+type Film = {
+  isim: string;
+  tur: string;
+  puan: number;
+};
 import Header from "./Components/Header";
 import FilmForm from "./Components/FilmForm";
 import FilmList from "./Components/FilmList";
 import Footer from "./Components/Footer";
-import React from 'react'
 import { useState } from "react";
 
 const App = () => {
-  const [filmler, setFilmler] = useState([]);
+  const [filmler, setFilmler] = useState<Film[]>([]);
   const [isim, setIsim] = useState("");
   const [tur, setTur] = useState("");
   const [puan, setPuan] = useState("");
@@ -30,7 +34,7 @@ const App = () => {
     setPuan("");
   };
 
-  const silFilm = (index) => {
+  const silFilm = (index: number) => {
       setFilmler(filmler.filter((_, i) => i !== index));
   };
 

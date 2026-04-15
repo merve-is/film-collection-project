@@ -1,6 +1,11 @@
+type Props = {
+    isim: string;
+    tur: string;
+    puan: number;
+    onSil: () => void;
+}
 
-
-const FilmCard = ({isim, tur, puan, onSil}) => {
+const FilmCard = ({isim, tur, puan, onSil}: Props) => {
     return (
         <div className="card backdrop-blur-md bg-white/5 border border-white/10 shadow-xl rounded-2xl transition hover: text-white transform hover:scale-97 hover:shadow-2xl w-72 p-4">
             <div className="card-body p-4">
